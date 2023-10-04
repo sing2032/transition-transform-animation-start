@@ -18,20 +18,61 @@
 
 .b1 {
 	background-color: #80e1d4;
-	/*blue*/
+	/*green*/
 }
 
 .b2 {
 	background-color: #9696ff;
-	/*orange*/
+	/*purple*/
 }
 
 .b3 {
 	background-color: #85e1f4;
-	/*green*/
+	/*blue*/
 }
 
 .b4 {
 	background-color: #e89380;
-	/*purple*/
+	/*orange*/
+}
+
+/*********************************************************************
+							Transtion
+*********************************************************************/
+
+.transition .b1{
+	transition: width 1s ease-in-out;
+}
+
+.transition .b1:hover{
+	width:400px;
+	height: 150px;
+}
+
+.transition .b2{
+	transition: width 1s, height 0.5s;
+	transition-delay: 0.5s;
+}
+
+.transition .b2:hover{
+	width: 250px;
+	height: 250px;
+}
+
+.transition .b3{
+	transition: transform 2s cubic-bezier(.2,-0.22,.73,1.39) .5s;
+}
+
+.transition .b3:hover{
+	transform: rotate(320deg);
+}
+
+.transition .b4{
+	transition: all 1s ease-in-out 0.3s;
+}
+
+.transition .b4:hover{
+	transform: rotate(320deg);
+	border-radius: 50%;
+	background-color: #9696ff;
 }
