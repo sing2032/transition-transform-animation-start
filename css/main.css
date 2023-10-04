@@ -115,3 +115,55 @@
 							Animation
 *********************************************************************/
 
+@keyframes changeColor{
+	from{
+		background-color: rgb(226, 197, 65);
+	}
+	to{
+		background-color: #e89380;
+	}
+}
+
+.animation .b1{
+	animation-name: changeColor;
+	animation-duration: 1s;
+	animation-delay:2s;
+	animation-fill-mode: forwards;
+	animation-iteration-count:4;
+}
+
+@keyframes moveAround{
+	0%, 100%{transform: translate(0, 0);}
+	25%{transform: translate(200px, 0);}
+	50%{transform: translate(200px, 200px);}
+	75%{transform: translate(0, 200px);}
+}
+
+.animation .b2{
+	animation: moveAround 5s infinite alternate ease-in-out;
+
+
+}
+
+@keyframes transformer{
+	0%{
+		transform: translateX(0) rotateX(0);
+		background-color:rebeccapurple;
+	}
+	100%{
+		transform: translateX(600px) rotateX(180deg);
+		background-color:mediumaquamarine;
+	}
+}
+
+.animation .b3{
+	animation: transformer 1.5s infinite alternate;
+}
+
+.animation .b4{
+	animation: transformer 1.5s infinite alternate cubic-bezier(.2,-0.22,.73,1.39) ;
+}
+
+.animation .b4:hover{
+	animation-play-state: paused;
+}
